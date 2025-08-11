@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Superjoa10's Projects showcase</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="website icon" href="{{ url_for('static', filename='docs/faces.png') }}">
+
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        
+    </head>
+    <body>
+        {% include 'header.html' %}
+        
+        <main>
+            <h1 class="projects-header">Projetos</h1>
+            <section class="project" id="website-project">
+                <div class="project-content">
+                    <div class="project-carousel">
+                        <img src="{{ url_for('static', filename='docs/project_website/main_overview.jpg') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/project_website/fale_cmg.jpg') }}" class="carousel-image" alt="Website Project Image 2">
+                        <img src="{{ url_for('static', filename='docs/project_website/chatbot_overview.jpg') }}" class="carousel-image" alt="Website Project Image 3">
+                        <img src="{{ url_for('static', filename='docs/project_website/caso_uso.jpg') }}" class="carousel-image" alt="Website Project Image 4">
+                
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>Website Project</h2>
+
+                        <p class="brief-description">
+                            Um site criado com muito carinho para ser meu portfólio e apresentação das minhas habilidades como Web dev. Um lugar que eu posso experimentar com técnicas Frontend interessantes e oferecer meus serviços de forma mais pessoal, a escolha dos elementos 3D no site demonstra isso e minha falta de medo em experimentar e aprender tecnologias promissoras.
+                        </p> 
+
+                        <div class="full-description" style="display: none;">
+                            Esse projeto foi feito com as seguintes tecnologias:<br>
+                            <br>
+                            Backend - Flask, Jinja2, Flask-Mail;<br>
+                            Frontend - Three.js, AJAX.<br>
+                            <br>
+                            A escolha do Flask como Backend para um projeto 'pequeno' se leva ao fato que esse site serve como apresentação e documentação para outro grande projeto meu, o Chatbot Ai Whatsapp, que necessitava de um termo de uso e um site de apresentação, o que me incentivou a iniciar esse site portfólio. A escolha do Frontend se leva pelo meu interesse em modelagem 3D, e a possibilidade de adicionar personalidade ao site, fora as inúmeras possibilidades de sites interativos que podem ser feitos usando o Three.js.
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                <a href="https://github.com/yourusername/website-project" class="icon-link">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                                <a href="{{ url_for('main_page') }}#home" class="icon-link">
+                                    <i class='bx bx-home' ></i>
+                                </a>
+                            </div>
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="maps_query">
+                <div class="project-content">
+                    <div class="project-carousel">
+                        <img src="{{ url_for('static', filename='docs/maps_query/main_menu.png') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/maps_query/maps_itself.png') }}" class="carousel-image" alt="Website Project Image 2">
+                        <img src="{{ url_for('static', filename='docs/maps_query/saving.png') }}" class="carousel-image" alt="Website Project Image 3">
+                        <img src="{{ url_for('static', filename='docs/maps_query/result.png') }}" class="carousel-image" alt="Website Project Image 4">
+
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>Google Maps Query</h2>
+
+                        <p class="brief-description">
+                            Um projeto / Ferramenta de linha de comando de Web scraping que extrai contatos e informações de negócios do google maps com base em localização e nicho. O projeto possui 2 versões (Java / Python), ambas usando Selenium com o código base quase que idêntico, com diferenças na interface.
+                        </p> 
+
+                        <div class="full-description" style="display:none;">
+                            Esse projeto foi feito com as seguintes tecnologias:<br>
+                            <br>
+                            Python - Selenium, Tkinter, Pandas;<br>
+                            Java - Selenium, FuzzyScore, XSSFWorkbook.<br>
+                            <br>
+                            A versão em python é a original é bem básica, tendo como diferencial incluso a ferramenta Business Client Capture, que usa os arquivos gerados para enviar mensagem no Whatsapp para os negócios, com possibilidade de mensagens personalizadas e mensagens programadas.
+                            <br>
+                            A versão Java foi uma adaptação feita para suprir a necessidade de um projeto de faculdade, ele não tem incluso a ferramenta que chama os contatos, porém ele é muito mais amigável em questão que, a exigência da faculdade é a documentação, e uma seção FAQ (perguntas frequentes) onde eu implementei o esquema "FuzzyScore" para que as perguntas não tenham que ser escritas exatamente para ser identificadas. 
+                            Caso queira testar elas, baixe o arquivo .exe, ou use o código condizente disponível no github.
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                
+                                <a href="https://github.com/Superjoa10/Maps_Web_Scrapper" class="icon-link">
+                                    <i class='bx bxl-java'></i>
+                                </a>
+
+                                <div class="separation-maps">
+                                    <a href="https://github.com/Superjoa10/Google-Maps-Scraper-Bussiness-Client-Capture" class="icon-link">
+                                        <i class='bx bxl-python' ></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="iris_identif">
+                <div class="project-content">
+                    <div class="project-carousel">
+
+                        <img src="{{ url_for('static', filename='docs/iris_identif/main_pt.jpg') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/iris_identif/main_en.jpg') }}" class="carousel-image" alt="Website Project Image 2">
+                        <img src="{{ url_for('static', filename='docs/iris_identif/identif_main.jpg') }}" class="carousel-image" alt="Website Project Image 3">
+
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>Iris_Identif AI model tool</h2>
+
+                        <p class="brief-description">
+                            Primeiro projeto realizado após finalizar o curso CS50AI de inteligencia artificial. Aplicativo com interface que, com um banco de dados com informações de 150 instancias da flor Iris, sendo 3 especiaes prevalentes nos Estados Unidos, eu treinei alguns modelos para que, dado-se informações das petalas dela, sera determiniado qual é a especie correspondente.
+                        </p> 
+
+                        <div class="full-description" style="display:none;">
+                            Esse projeto foi feito com as seguintes tecnologias:<br>
+                            <br>
+                            Backend - TensorFlow, Keras, ConfigParser, sklearn, Pandas;<br>
+                            Frontend(APP) - Tkinter GUI.<br>
+                            <br>
+                            O App foi feito para demonstrar as capacidades de um modelo machine learning no mundo real, e quão preciso ele pode ser. Em questão do GUI / Visuais em si eles foram feitos com carinho e com um designe moderno em mente, ele possui configurações, informações de uso e um seletor de linguagem dinamico.
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                <a href="https://github.com/Superjoa10/iris_identif-GUI" class="icon-link">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="mluz_agenda">
+                <div class="project-content">
+                    <div class="project-carousel">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/home.jpg') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/main.jpg') }}" class="carousel-image" alt="Website Project Image 2">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/main_whatsapp.jpg') }}" class="carousel-image" alt="Website Project Image 3">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/anual_anal.jpg') }}" class="carousel-image" alt="Website Project Image 4">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/anual_anal_2.jpg') }}" class="carousel-image" alt="Website Project Image 5">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/analisis.jpg') }}" class="carousel-image" alt="Website Project Image 6">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/add_month.jpg') }}" class="carousel-image" alt="Website Project Image 7">
+                        <img src="{{ url_for('static', filename='docs/mluz_projects/analise_month.jpg') }}" class="carousel-image" alt="Website Project Image 8">
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>Mluz's apps</h2>
+
+                        <p class="brief-description">
+                            Um conjuto de aplicativos, automações e ferramentas de linha de comando que eu fiz para o meu trabalho, uma assessoria de cobrança. Esses foram os primeirossoftwares que eu produzi, são 2 apps diferentes, uma agenda de acordos (App com GUI) que manda mensagem no Whatsapp no vencimento dos acordos. Uma ferramenta que manda extrai numero e email, e manda mensagem de cobrança com base em condicionais extraidas do nanco de dados principal da empresa.
+                        </p> 
+
+                        <div class="full-description" style="display:none;">
+                            Os 2 projetos foram feitos com as seguintes tecnologias:<br>
+                            <br>
+                            Agenda - Tkinter, Sqlite, Selenium, FuzzyWuzzy, ConfigParser, gender_guesser, pyautogui, matplotlib;<br>
+                            Cob_setor - Selenium, gender_guesser, pyautogui, smtplib <br>
+                            <br>
+                            A agenda foi o primeiro aplicativo de desktop que eu fiz, e eu ao longo dos anos implementei diversas coisas que eu fui aprendendo nele. O mais notavel foi o GUI em si, em que eu tive muito trabalho modernizando ele, posteriormente os acordos ficavam num arquivo excel, eu implementei um banco de dados local Sqlite, esquema de pesquisa por aproximação para localizar os casos, extração de excel dos dados do DB, analise / comparação avançada entre arquivos e analise e visualização de dados usando matplotlib.
+                            <br>
+                            O segundo, extrai direta e puramente o banco de dados da empresa, sendo em Access Runtime 2010, analisa os setores e manda mensagens no whatsapp e email condicionais com base em, tempo (dia, noite), genero da pessoa e tipo de documento. Cada setor tem em torno de 200 casos e o banco de dados inteiro mas de 3.000, sendo recomendado o envio de 100 por dia
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                <a href="https://github.com/Superjoa10/Mluz.db-projects" class="icon-link">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="dinamic_ibm">
+                <div class="project-content">
+                    <div class="project-carousel">
+                        <img src="{{ url_for('static', filename='docs/sellers_table/main.png') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/sellers_table/search.png') }}" class="carousel-image" alt="Website Project Image 2">
+
+
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>Plataforma Dinâmica de Gestão de Equipes - <span id="ibm">IBM</span></h2>
+
+                        <p class="brief-description">
+                            Um projeto de visualização e gestão da alocação de equipes técnicas, com foco em sua distribuição operacional.
+                            A ferramenta tem uma peculiaridade devido a nescessidades da empresa, a interface é dinâmica, com adição flexível de colunas e linhas, 
+                            adaptando-se a estruturas organizacionais voláteis.
+                        </p> 
+
+                        <div class="full-description" style="display:none;">
+                            Stack:<br>
+                            <br>
+                            Python, Flask, Podman, IBM DB2 <br>
+                            <br>
+                            Essa nescessidade volatil de colunas e linhas foi um desafio interessante de resolver, e nós tinhamos que utilizar o DB2 como banco de dados, o mesmo é relacional, 
+                            mas nós usamos um objeto CLOB (Character Large Object) para armazenar os dados, e o uso de Flask para criar uma API que interage com o banco de dados DB2, guardando
+                            os dados de forma dinâmica, e retornando eles para o frontend, que é feito em HTML puro, com CSS e JavaScript.<br>
+                            <br>
+                            A applicação foi transformada em um container Podman, para facilitar o deploy e a escalabilidade da mesma, utilizando o Podman devido
+                            a exigencias da empresa. A nescessidade de usar container se leva ao fato que nós iriamos hospedar a aplicação em um servidor cloud 
+                            IBM Code Engine.<br>
+                            <br>
+                            Essas dificuldades e desafios exigiram criatividade, principalmente na hospedagem, gerenciamento do banco de daods e na hora da connexão com 
+                            o front-end da applicação e formação das funções da Api, porem ela permite de forma amigalvel que um gerente altere quando nescessario a estrutura da equipe.
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7336789895929069569/" class="icon-link">
+                                    <i class='bx bxl-linkedin-square'></i>
+                                </a>
+                            </div>
+
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project" id="tls_sla">
+                <div class="project-content">
+                    <div class="project-carousel">
+                        <img src="{{ url_for('static', filename='docs/tls_sla/main.png') }}" class="carousel-image active" alt="Website Project Image 1">
+                        <img src="{{ url_for('static', filename='docs/tls_sla/unique.png') }}" class="carousel-image" alt="Website Project Image 2">
+                        
+                        <div class="carousel-controls">
+                            <span class="carousel-arrow left-arrow"><i class='bx bx-skip-previous'></i></span>
+                            <span class="carousel-arrow right-arrow"><i class='bx bx-skip-next'></i></span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h2>TLS SLA Scripts - <span id="ibm">IBM</span></h2>
+
+                        <p class="brief-description">
+                            Um projeto de automação/pipelines de informação de scripts para a equipe de TLS da IBM, com o objetivo de automatizar o processo de 
+                            criação e atualização de SLAs (Service Level Agreements) para clientes. São 3 scripts que extraem informações de um arquivo Excel ou CSV
+                            e as organizam em arquivos separados por cliente e tipo de análise, facilitando a gestão e o acompanhamento dos SLAs.
+                        </p> 
+
+                        <div class="full-description" style="display:none;">
+                            Stack:<br>
+                            <br>
+                            Python, RapidFuzz, Numpy, Pandas <br>
+                            <br>
+                            Pipeline de informações com Python, Extração e análise de dados, uma ferramenta de linha de comando CLI 
+                            Que distrubui para 3 scripts diferentes, sendo eles FIN, SF4 e SLA, cada um com uma função específica e analises especiaes, um
+                            arquivo originario e pasta (uma para cada analise, cada uma com um arquivo excel pra cliente).<br>
+                            <br>
+                            Foi um trabalho de melhoria de um script antigo que ja existia, tive que melhorar a performance dele, e a usabilidade,
+                            adicionar novas funções e etc. Um dos maiores desafios foi entender as regras de negocio e como isso se aplicava ao script.
+                        </div>
+
+                        <div class="project-footer">
+                            <div class="project-icons">
+                                
+                            </div>
+                            <button class="read-more-btn">ler mais...</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        {% include 'footer.html' %}
+        
+        <script>
+            $(document).ready(function() {
+                $('.read-more-btn').click(function() {
+                    const fullDescription = $(this).closest('.project-content').find('.full-description');
+    
+                    if (fullDescription.is(':visible')) {
+                        fullDescription.slideUp('slow');
+                        $(this).text('ler mais...');
+                    } else {
+                        fullDescription.slideDown('slow');
+                        $(this).text('ler menos...');
+                    }
+                });
+    
+                // Carousel Functionality TODO if its mobile always active
+                $('.project').each(function() {
+                    let currentIndex = 0;
+                    const images = $(this).find('.carousel-image');
+                    const totalImages = images.length;
+    
+                    function showImage(index) {
+                        images.removeClass('active');  // Remove 'active' class from all images
+                        images.eq(index).addClass('active');  // Add 'active' class to the current image
+                    }
+    
+                    $(this).find('.right-arrow').click(function() {
+                        currentIndex = (currentIndex + 1) % totalImages;
+                        showImage(currentIndex);
+                    });
+    
+                    $(this).find('.left-arrow').click(function() {
+                        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                        showImage(currentIndex);
+                    });
+    
+                    // Initial display
+                    showImage(currentIndex);
+                });
+            });
+        </script>
+    </body>
+</html>

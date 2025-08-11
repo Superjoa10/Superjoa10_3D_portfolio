@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+</head>
+
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://github.com/Superjoa10">
+            <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/joao-victor-santos-luz/">
+            <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://www.upwork.com/freelancers/~01571e16b3eec8424d">
+            <i class='bx bxl-upwork'></i>
+        </a>
+    </div>
+
+    <ul class="list">
+        <li>
+            <a href="{{ url_for('main_page') }}#services">Serviços</a>
+        </li>
+        <li>
+            <a href="{{ url_for('main_page') }}#about">Sobre</a>
+        </li>
+        <li>
+            <a href="{{ url_for('main_page') }}#contact">Contato</a>
+        </li>
+        <li>
+            <a href="{{ url_for('services_AIbot_page') }}">Whatsapp AIBot</a>
+        </li>
+    </ul>
+
+    <p class="copyright">
+        © João Luz | Direitos Reservados
+    </p>
+</footer>

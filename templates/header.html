@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+
+</head>
+
+<header class="header">
+    <a href="{{ url_for('main_page') }}#home" class="logo">
+        <span>João</span><span class="glowing-txt"> Luz</span>
+    </a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="{{ url_for('main_page') }}#about">Sobre</a>
+        <a href="{{ url_for('main_page') }}#services">Serviços</a>
+        <a href="{{ url_for('main_page') }}#contact">Contatos</a>
+        <div class="separation-site">
+            <a href="{{ url_for('projects_page') }}">Projetos</a>
+            <a href="{{ url_for('services_websites_pages') }}">Websites</a>
+            <a href="{{ url_for('services_AIbot_page') }}">Whatsapp ChatBOT</a>
+        </div>
+    </nav>
+</header>
+<script src="{{ url_for('static', filename='js/header.js') }}"></script>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Superjoa10's resume website!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="website icon" href="{{ url_for('static', filename='docs/faces.png') }}">
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/text_animation.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/popup.css') }}">
+
+        <script type="module" src="{{ url_for('static', filename='js/three_main.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/fill_in.js') }}"></script>
+    </head>
+    <body>
+        {% include 'header.html' %}
+
+        <section class="home" id="home">
+            <div class="home-content">
+                <h1>Olá, eu sou o <span>João</span></h1> 
+                <h3 class="text-animation">
+                    Eu sou um
+                    <p></p>
+                    <span></span>
+                </h3>
+                <p>Estagiário na <span id="ibm">IBM Brasil</span>, programador por interesse próprio, estudante de ciência da computação, baseado em São Paulo, Brasil. Se você busca interesse absoluto na área, dedicação e excelência, veio ao lugar certo, cada uma das tecnologias que eu utilizo eu pesquiso a fundo e masterizo, sempre focando em melhoria.</p>
+
+                <div class="social-icons">
+                    <a href="https://github.com/Superjoa10"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/joao-victor-santos-luz/"><i class="bx bxl-linkedin-square"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01571e16b3eec8424d"><i class='bx bxl-upwork' ></i></a>
+                </div>
+                <div class="btn-group">
+                    <a href="{{ url_for('main_page') }}#services" class="btn">Serviços</a>
+                    <a href="#contact" class="btn">Contato</a>
+                </div>
+            </div>
+            <div class="three_obj_container" id="three_obj_container"></div>
+        </section>
+
+
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2>Sobre <span>mim</span></h2>
+                <p>
+                    Um estudante das ciências da computação, gamer e entusiasta em mídias de terror, me aspiro em ser um modelador 3D com foco nesse tema. Intenso naquilo que me interessa, todos os meus projetos pessoais têm sangue e suor derramados neles, com a garantia de um toque especial em cada um deles, sendo meu foco atual a Integração em TI e automação de processos, com planos de aprimoramento nas minhas habilidades frontend e fullstack.
+                </p>
+                <a href="{{ url_for('projects_page') }}" class="btn">Veja meus projetos</a>
+            </div>
+            <div class="about-img">
+                <img src="{{ url_for('static', filename='docs/faces.gif') }}"  alt="Missing file 'faces.gif'">
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2>Habilidades</h2>
+            <div class="ticker-container">
+                <div class="ticker-wrapper">
+                    <div class="ticker-transition">
+                        <div class="ticker-item">
+                            <i class='bx bxl-python'></i> Python
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxl-flask' ></i> Flask
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxl-django' ></i> Django
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bx-data'></i> SQL
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxl-java'></i>Java
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxl-javascript' ></i>Javascript
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxs-file-html' ></i>HTML | CSS
+                        </div>
+                        <div class="ticker-item">
+                            <i class='bx bxl-php' ></i>PHP
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2 class="heading">Serviços</h2>
+            <div class="services-container">
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bxs-devices"></i>
+                        <h4>Automações & Criação de sistemas</h4>
+                        <p>
+                            A vida nos tempos de hoje requer que façamos vários processos repetitivos e chatos em diversos parâmetros, seja um relatório por email repetitivo que você tem que mandar todo dia, uma mensagem que você tem que mandar para números específicos, ou talvez teste de uso em websites, ou quem sabe extração de dados da internet. Minha principal automação é a Google_maps_query, uma ferramenta que extrai contatos de negócios do google maps. Entre outras automações e os seus sistemas e interfaces GUI para maior facilidade de uso. 
+                        </p>
+                        <a href="#contact" class="btn" onclick="fillAutomationForm()">Saiba Mais...</a>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class="bx bx-code"></i>
+                        <h4>Quer um Website igual a esse?</h4>
+                        <p>
+                            Esse é meu site currículo e portfólio, o mesmo possui mecanismos simples porém a cereja do bolo é a integração de elementos 3D na página. A livraria que eu utilizo para carregar elementos 3D na web é o Three.js, uma livraria revolucionária que proporciona ao desenvolvedor fazer sites realmente únicos. 
+                        </p> 
+                        <a  href="{{ url_for('services_websites_pages') }}" class="btn">Saiba Mais...</a>
+                    </div>
+                </div>
+                <div class="service-box">
+                    <div class="service-info">
+                        <i class='bx bxl-whatsapp'></i>
+                        <h4>Chatbot com AI no Whatsapp</h4>
+                        <p>
+                            Esse serviço é um assistente para Whatsapp que integra o ChatGPT na conversa diretamente, dando respostas dinâmicas baseadas a instruções e documentos entregues a ele posteriormente. Isso pode ser um assistente para um hotel 5 estrelas que foi instruído a ser extremamente educado, e que responda dúvidas aos clientes sobre a estadia e regras do hotel, que podem estar presentes em um documento, em que o bot irá referenciar diretamente.
+                        </p> 
+                        <a href="{{ url_for('services_AIbot_page') }}" class="btn">Saiba Mais...</a >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="heading">Fale<span>Comigo</span></h2>
+            <form action="{{ url_for('send_message') }}" method="POST">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Nome | Instituição" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="subject" placeholder="Assunto" required>
+                    </div>
+                </div>
+                <div class="input-group-2">
+                    <textarea name="message" cols="30" rows="10" placeholder="Sua mensagem" required></textarea>
+                    <input type="submit" value="Mandar mensagem" class="btn">
+                </div>
+            </form>
+            <div class="btn-center">
+                <a href="{{ url_for('static', filename='docs/João Luz - Curriculo.pdf') }}" class="download-btn" download>
+                    <i class='bx bxs-file-pdf'></i> Quer uma copia do meu curriculo?
+                </a>
+            </div>
+        </section>
+        
+        {% include 'footer.html' %}
+
+        <!-- Popup code -->
+        <div id="flash-popup" class="flash-popup">
+            <div class="flash-popup-content">
+                <span id="flash-popup-message"></span>
+                <button id="flash-popup-close">&times;</button>
+            </div>
+        </div>
+        
+        <script>
+            // Call flash messages function if there are any messages
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                document.addEventListener('DOMContentLoaded', function() {
+                    var messages = {{ messages|tojson }};
+                    window.showFlashMessages(messages);
+                });
+              {% endif %}
+            {% endwith %}
+        </script>
+    </body>
+</html>
+        
+       

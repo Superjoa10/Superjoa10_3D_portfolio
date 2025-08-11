@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Superjoa10's Technology solutions!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="website icon" href="{{ url_for('static', filename='docs/faces.png') }}">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bot_carrossel.css') }}">
+    </head>
+    <body>
+        {% include 'header.html' %}
+        
+        <div id="threejs-container"></div>
+        <h1 class="main-header">ChatGPT WhatsApp Chatbot</h1>
+        <section class="project-overview" id="project-overview">
+            <div class="main-img">
+                <img src="{{ url_for('static', filename='docs/ai_bot_img.jpg') }}"  alt="ChatGPT WhatsApp Chatbot">
+            </div>
+            <div class="overview-content">
+                <h2>Visão <span>Geral</span></h2>
+                <p>Que tal você ter um consultor/vendedor especialista no assunto para tirar as dúvidas dos seus clientes, só que sem ter que gastar tempo e dinheiro treinando ele? O Chatbot com integração do ChatGPT trata seus clientes exatamente do jeito que você quiser, aprende de forma dinâmica e faz referências diretas ao material entregue a ele.</p>
+                <div class="btn-grid">
+                    <a href="#general-info" class="btn">Informações Gerais</a>
+                    <a href="#exemples" class="btn">Casos de uso / Exemplos</a>
+                    <a href="#tecnical-info" class="btn">Informações Técnicas</a>
+                    <a href="{{ url_for('main_page') }}#contact" class="btn">Orçamento</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="general-info" id="general-info">
+            <h2>Informações Gerais</h2>
+            <div class="info-content">
+                <p>O Chatbot WhatsApp com integração ChatGPT é uma ferramenta poderosa projetada para melhorar a interação com os clientes, fornecendo respostas rápidas e precisas. Este chatbot utiliza inteligência artificial avançada para compreender e responder às dúvidas dos clientes, garantindo uma experiência de atendimento eficiente e personalizada. Ideal para empresas de todos os tamanhos, o Chatbot pode ser configurado para aprender continuamente e se adaptar às necessidades específicas do seu negócio.</p>
+                
+                <h3>Principais Funcionalidades:</h3>
+                <ul>
+                    <li>Respostas instantâneas a perguntas frequentes.</li>
+                    <li>Aprendizado contínuo e adaptação ao comportamento dos usuários.</li>
+                    <li>Capacidade de integrar com sistemas existentes.</li>
+                </ul>
+        
+                <h3>Benefícios:</h3>
+                <ul>
+                    <li>Economia de tempo e recursos com atendimento automatizado.</li>
+                    <li>Melhoria na satisfação do cliente com respostas rápidas e precisas.</li>
+                    <li>Escalabilidade para atender um grande volume de interações.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exemples" id="exemples">
+            <h2 class="exemple-header">Exemplos / Casos de uso</h2>
+            <div class="exemple-container">
+                <div class="outer-carrossel">
+                    <div class="container-carrossel">
+                        <div class="carrossel">
+                            <div class="carrossel-item">
+                                <h3>Pizzaria</h3>
+                                <p>
+                                    Um assistente que ajuda o cliente a escolher a pizza ideal, sugere combinações de sabores, com acesso ao cardapio atualizado,
+                                    tira dúvidas sobre ingredientes e sabores disponiveis e oferece promoções especiais. Isso tudo de forma rápida e prática, 
+                                    diretamente no WhatsApp, guardando o pedido e organizando para que seus cozinheiros consigam atender os pedidos.
+                                </p>
+                            </div>
+                            <div class="carrossel-item">
+                                <h3>Hotel na Bahia</h3>
+                                <p>
+                                    Um assistente super inteligente e educado que, alem de tirar duvidas sobre o hotel, as regres do quarto, senha do Wi-Fi,
+                                    horários de check-in e check-out, também pode sugerir passeios, restaurantes e atividades na area. 
+                                    Alem disso ele é bilingue, usando a capacidade da AI, pode atender clientes que falam diversos idiomas,
+                                    garantindo que todos tenham uma experiência agradável e personalizada.
+                                </p>
+                            </div>
+                            <div class="carrossel-item">
+                                <h3>Loja de Eletrônicos</h3>
+                                <p>
+                                    Um assistente de uma loja de eletronicos no centro de São Paulo que ajuda os clientes a encontrar o produto ideal,
+                                    compara preços, verifica disponibilidade em estoque e oferece recomendações personalizadas com base nas preferências do cliente.
+                                    Ele, alem de ser educado e atencioso, e capaz de ser "nerd" e especialista com base em informações técnicas dos produtos,
+                                    e no interesse do cliente, oferecendo uma experiência de compra única e eficiente.
+                                </p>
+                            </div>
+                            <div class="carrossel-item">
+                                <h3>Nutricionista</h3>
+                                <p>
+                                    Um assistente que ajuda os pacientes a manterem uma alimentação saudável, oferecendo dicas de nutrição, receitas saudáveis,
+                                    e sugestões de cardápios personalizados. Com base em documentos entregues pelo nutricionista,
+                                    ele pode responder perguntas sobre dietas específicas, alergias alimentares e restrições dietéticas,
+                                    garantindo que cada paciente receba orientações adequadas às suas necessidades nutricionais.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exemple-content">
+                    <p>Teste esses casos de uso ao vivo diretamente no meu Whatsapp. Veja também os prompts entregues ao assistente e quanto eles mudam diretamente o comportamento dele na conversa. Gostaria de testar esses exemplos descritos? Basta clicar no botão abaixo.</p>
+                    <div class="exemple-btn-cluster">
+                        <button><i class='bx bxl-whatsapp'></i> Chame o número <i class='bx bx-error'></i> Em construção!!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="technical-info" id="tecnical-info">
+            <h2 class="technical-header">Informações Técnicas</h2>
+
+            <div class="info-content">
+                <p>O sistema é construído sobre uma arquitetura robusta em nuvem, projetada para escalar conforme a demanda do seu negócio. A solução utiliza um servidor Python hospedado em cloud, onde a capacidade da máquina (CPU, RAM e armazenamento) é dimensionada de acordo com o número de usuários simultâneos e a complexidade da inteligência implementada.</p>
+                
+                <p><strong>Exemplo prático:</strong> Para uma pizzaria que precisa gerenciar pedidos, processar cardápios dinâmicos e integrar com sistemas de estoque, utilizamos uma configuração de servidor intermediária. Já para um simples atendimento FAQ, uma configuração básica é suficiente.</p>
+
+                <h3>Componentes principais da stack:</h4>
+                <ul>
+                    <li><strong>Servidor Python em Cloud:</strong> Hospedagem escalável (AWS, Google Cloud ou Azure) com configuração adaptada ao volume de uso</li>
+                    <li><strong>OpenAI API:</strong> Integração com GPT-4 para processamento de linguagem natural e geração de respostas inteligentes</li>
+                    <li><strong>Meta WhatsApp Business API:</strong> Conexão oficial com WhatsApp para envio e recebimento de mensagens</li>
+                    <li><strong>Banco de Dados:</strong> PostgreSQL para armazenamento de conversas, histórico e configurações personalizadas (Opcional)</li>
+                </ul>
+
+                <p>O investimento no chatbot é composto por diferentes componentes que variam conforme o uso e complexidade. Transparency total nos custos para que você possa planejar adequadamente:</p>
+
+                <h3>Principais geradores de custo:</h4>
+                <ul>
+                    <li><strong>Hospedagem em Cloud:</strong> Varia de R$ 200-1500/mês dependendo do tráfego e complexidade (servidor básico para 100 usuários/dia até servidor robusto para 10.000+ usuários/dia)</li>
+                    <li><strong>OpenAI API:</strong> Aproximadamente R$ 0,10-0,50 por conversa, dependendo da extensão e complexidade das respostas</li>
+                    <li><strong>WhatsApp Business API:</strong> Meta cobra cerca de R$ 0,05-0,25 por mensagem enviada (recebimento é gratuito)</li>
+                    <li><strong>Desenvolvimento Inicial:</strong> Configuração personalizada, treinamento da IA e integração com seus sistemas existentes</li>
+                    <li><strong>Manutenção e Suporte:</strong> Monitoramento 24/7, atualizações de segurança, backup automático e suporte técnico especializado (planos negociaveis)</li>
+                </ul>
+
+                <p><strong>Importante:</strong> Oferecemos pacotes mensais que incluem uma franquia de mensagens e uso de IA, facilitando o controle de custos. Custos adicionais só ocorrem se ultrapassar os limites acordados.</p>
+            </div>
+            <div class="btn-center">
+                <button onclick="fillAIForm()"><i class='bx bxs-brain'></i>Fale Comigo para obter seu orçamento</button>
+            </div>
+        </section>
+        
+        {% include 'footer.html' %}
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="{{ url_for('static', filename='js/three_bot.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bot_carrossel.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/fill_in.js') }}"></script>
+
+        
+    </body>
+</html>
