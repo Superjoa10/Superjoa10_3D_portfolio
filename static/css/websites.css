@@ -1,1 +1,19 @@
+/* ===============================
+   WEBSITES PAGE SPECIFIC STYLES
+   =============================== */
+
+/* Currently using maintenance template */
+/* Add future website-specific styles here */
+
+.websites-container {
+    padding: 5rem 0;
+    background-color: var(--bg-color);
+}
+
+.websites-header {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 3rem;
+}
 

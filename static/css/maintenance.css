@@ -1,4 +1,8 @@
 
+/* ===============================
+   MAINTENANCE PAGE SPECIFIC STYLES
+   =============================== */
+
 .maintenance-container h2 {
     text-align: center;
     font-size: 5rem;
@@ -7,6 +11,6 @@
     background-color: var(--bg-color);
 }
 
-.maintenance-container h2 i{
-    color: var(--main-color)
+.maintenance-container h2 i {
+    color: var(--main-color);
 }
