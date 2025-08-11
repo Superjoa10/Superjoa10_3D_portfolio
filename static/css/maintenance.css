@@ -1,0 +1,12 @@
+
+.maintenance-container h2 {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 30rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.maintenance-container h2 i{
+    color: var(--main-color)
+}

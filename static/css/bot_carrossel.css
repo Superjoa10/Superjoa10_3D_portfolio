@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap");
+
+
+
+.outer-carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.container-carrossel {
+  --widthItem: 350px;
+  --heightItem: 300px;
+  width: var(--widthItem);
+  height: var(--heightItem);
+  perspective: 1000px;
+}
+
+.carrossel {
+  --rotatey: 0;
+  font-size: 1.5rem;
+  position: relative;
+  transform: rotatey(var(--rotatey));
+  transform-style: preserve-3d;
+  user-select: none;
+  cursor: grab;
+}
+.carrossel h3{
+  font-size: 2.5rem;
+}
+
+.carrossel-item {
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+  flex: 1;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.carrossel-item:hover {
+  opacity: 1;
+}
+
+.carrossel,
+.carrossel-item {
+  width: 100%;
+  height: 100%;
+}
+/* background: linear-gradient(-229deg, #642B73, #C6426E); */
+
+.carrossel-item:nth-child(1) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, var(--main-color), #ef3a7b);
+}
+
+.carrossel-item:nth-child(2) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, var(--main-color), #ff5fcc);
+}
+
+.carrossel-item:nth-child(3) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, var(--main-color), #ff5fcc);
+}
+.carrossel-item:nth-child(4) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, var(--main-color), #ff5fcc);
+}
+
+

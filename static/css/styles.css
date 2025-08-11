@@ -1,0 +1,604 @@
+/*General style*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #100000;
+  --text-color: white;
+  --main-color: hsl(346, 87%, 50%);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+span#ibm {
+  color: rgb(51, 177, 255);
+}
+
+section {
+  padding: 7rem 12%;
+}
+
+
+/*Scrollbar style*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+
+/* Home style */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-top: 2rem;
+}
+
+.home-content h1 {
+  font-size: 6rem;  /* Adjusted for mobile */
+  font-weight: 700;
+  margin-top: 1rem;
+  line-height: 1;
+  width: 80%; /* Allow it to be more responsive */
+}
+
+.home-content h3 {
+  font-size: 2.7rem;
+  margin: 1rem 0;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+
+/* Container for the Three.js element */
+#three_obj_container   {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#three_obj_container canvas {
+  width: 650px !important;
+  height: 600px !important;/* Override any existing aspect ratio */
+  /* Add any other necessary styles */
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group{
+  display: flex;
+  gap: 1.5rem;
+}
+.btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  color: black;
+  border: 2px transparent;
+  font-weight: 600;
+  transition: 0.3 ease-in-out
+}
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color)
+}
+.btn-group a:nth-of-type(2){
+  background-color: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px;
+}
+.btn-group a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;
+}
+
+.download-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.download-btn i {
+  font-size: 3rem; /* Adjust this value to make the icon bigger */
+  margin-right: 1rem;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color);
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.text-section {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(183, 255, 238);
+  padding: 20px;
+  border: 1px solid rgb(183, 255, 238);
+  max-width: 600px;
+}
+
+.top-left {
+  margin-top: 70px; /* Add margin to account for header */
+  margin-left: 20px;
+}
+
+.bottom-left {
+  margin-top: 100vh; /* Position it below the fold */
+  margin-left: 20px;
+}
+
+
+/*About style*/
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+
+.about-content p {
+  font-size: 1.8rem;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+}
+
+.about-content .btn {
+  margin: 3rem 0;
+}
+
+
+/*Skills*/
+
+.skills{
+  background-color: #080808;
+  padding-top: 20px;
+}
+
+.skills h2 {
+  padding-bottom: 10px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.skills .ticker-item i{
+  background: transparent;
+  color: var(--main-color);
+  font-size: 2.8rem;
+}
+
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+  }
+  .ticker-wrapper {
+  width: 100%;
+  background-color: transparent;
+  }
+
+
+.ticker-transition {
+  display: flex;
+  white-space: nowrap;
+  }
+
+.ticker-item {
+  display: inline-flex;
+  font-size: 1.6rem;
+  padding: 0 5rem;
+  align-items: center;
+  min-width: 150px; /* Ensure a consistent width */
+  }
+
+/*Services style*/
+.heading {
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+
+.services {
+  padding-top: 1rem;
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.services h2 {
+  color: var(--text-color);
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-box {
+  background-color: var(--main-color);
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.service-box:hover {
+  background-color: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+
+.service-info {
+  padding: 5rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-info i {
+  font-size: 8rem;
+}
+
+.service-info h4 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+
+.service-info p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+  flex-grow: 1; /* Make the paragraph take up the remaining space */
+}
+
+/* Ensure that all service boxes have the same height */
+
+.services-container {
+  align-items: stretch;
+}
+
+.services button {
+  margin-top: auto; /* Push the button to the bottom */
+  display: inline-block;
+  padding: 1rem 3rem;
+  padding-top: 2.5rem;
+  background: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  align-self: flex-end;
+}
+
+.service-box:hover button {
+  background: var(--main-color);
+  color: black;
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+/*Contact style*/
+.contact {
+  background-color: var(--second-bg-color);
+  text-align: center; /* Center align all content inside the contact section */
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+  color: var(--text-color); /* Fixed color value */
+}
+
+.contact form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact-header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 0.5rem;
+  resize: none;
+}
+
+
+.contact form .input-box input {
+  padding: 20px;
+}
+
+.contact-form button {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact .resume-btn i {
+  margin-right: 0.5rem;
+  font-size: 3rem; /* Increase icon size */
+}
+
+.contact .resume-btn:hover {
+  color: var(--text-color);
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.project-section:after,
+.contact-section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media queries for mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;  /* Adjust base font size for smaller screens */
+  }
+
+  section {
+    padding: 5%;  /* Less padding for smaller screens */
+  }
+
+  .home {
+    flex-direction: column;  /* Stack content vertically on mobile */
+    gap: 3rem;  /* Reduce gap */
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+    padding-top: 4rem;  /* Less padding on top */
+  }
+
+  .home-content h1 {
+    font-size: 4rem;  /* Smaller font size on mobile */
+    width: 90%;  /* Take up more width */
+  }
+
+  .home-content h3 {
+    font-size: 2.2rem;  /* Slightly smaller font size */
+  }
+
+  .home-content p {
+    font-size: 1.4rem;  /* Slightly smaller font size */
+    line-height: 1.6;  /* Adjust line height */
+  }
+
+  #three_obj_container canvas {
+    width: 80vw !important;  /* Adjust canvas size */
+    height: auto !important;
+    aspect-ratio: unset !important; /* Override any existing aspect ratio */
+  }
+
+  .social-icons a {
+    font-size: 2.5rem;  /* Reduce icon size */
+    margin: 2rem 0.5rem;  /* Adjust margin */
+  }
+
+  /* Responsive adjustments for the "about" section */
+  .about {
+    display: flex;
+    flex-direction: column;  /* Stack content vertically on mobile */
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 100%;  /* Ensure image takes full width on mobile */
+  }
+
+  .about-content {
+    margin-top: 3rem;  /* Add spacing between image and content */
+  }
+
+  .about-content h2 {
+    font-size: 3.5rem;  /* Adjust heading size */
+  }
+
+  .about-content p {
+    font-size: 1.4rem;  /* Adjust paragraph size */
+  }
+
+  .about-content a.btn {
+    font-size: 1.5rem;  /* Adjust button size */
+  }
+
+  /* Adjustments for the services section */
+  .services-container {
+    display: flex;
+    flex-direction: column;  /* Stack service boxes vertically */
+    gap: 4rem;  /* Add spacing between service boxes */
+  }
+
+  .service-box {
+    padding: 2rem;  /* Adjust padding */
+    text-align: center;  /* Center align text */
+  }
+
+  .service-info h4 {
+    font-size: 2rem;  /* Adjust heading size */
+  }
+
+  .service-info p {
+    font-size: 1.4rem;  /* Adjust paragraph size */
+  }
+
+  .service-info a.btn {
+    font-size: 1.5rem;  /* Adjust button size */
+  }
+
+  /* Contact section adjustments */
+  .contact {
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+
+  .contact .input-group {
+    flex-direction: column;
+  }
+
+  .contact .input-group .input-box {
+    width: 100%;  /* Full width for inputs */
+    margin-bottom: 1.5rem;
+  }
+
+  .contact .input-group-2 textarea {
+    width: 100%;
+  }
+
+  .contact .input-group-2 .btn {
+    width: 100%;
+  }
+
+  .btn-center {
+    margin-top: 2rem;
+  }
+
+  .btn-center a {
+    font-size: 1.5rem;  /* Adjust button font size */
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .project-image {
+    float: none;
+    margin: 0 auto 1rem auto;
+    display: block;
+  }
+
+  .project-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form {
+    width: 100%;
+    flex-direction: column;
+  }
+}

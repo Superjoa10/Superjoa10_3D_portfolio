@@ -1,0 +1,159 @@
+/* Import the Raleway font */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+/* Header style */
+.header {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 12%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row !important;
+    z-index: 100;
+}
+
+.separation-site{
+    border-left: 1px solid var(--main-color);
+}
+
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color);
+}
+
+
+@media (max-width: 1024px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 2.2rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        border-bottom-left-radius: 2rem;
+        display: none;
+    }
+    .navbar a {
+        display: block;
+        font-size: 1.7rem;
+        margin: 2rem 0;
+        color: var(--text-color);
+    }
+    .navbar.active {
+        display: block;
+    }
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+    }
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    .home-img img {
+        width: 52vw;
+    }
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .about h2 {
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .about img {
+        width: 52vw;
+    }
+    .contact form {
+        flex-direction: column;
+    }
+    .separation-site{
+    border-top: 2px solid var(--main-color);
+    border-left: none;
+}
+}
+
+/* Glowing effect styles */
+:root {
+    --glow-color: hsl(0, 0%, 100%);
+}
+
+.glowing-txt {
+    color: white;
+    margin-right: -0.8em;
+    -webkit-text-shadow: 0 0 0.125em hsl(0, 0%, 100%),
+                        0 0 0.45em var(--glow-color);
+    -moz-text-shadow: 0 0 0.125em hsl(0, 0%, 100%),
+                     0 0 0.45em var(--glow-color);
+    text-shadow: 0 0 0.125em hsl(0, 0%, 100%),
+                 0 0 0.45em var(--glow-color);
+    animation: text-flicker 5s linear infinite;
+}
+
+.logo:hover
+.glowing-txt:hover {
+    animation: none;
+  }
+
+@keyframes text-flicker {
+    0% { opacity: 0.1; }
+    2% { opacity: 1; }
+    8% { opacity: 0.1; }
+    9% { opacity: 1; }
+    12% { opacity: 0.1; }
+    20% { opacity: 1; }
+    25% { opacity: 0.3; }
+    30% { opacity: 1; }
+    70% { opacity: 0.7; }
+    72% { opacity: 0.2; }
+    77% { opacity: 0.9; }
+    100% { opacity: 0.9; }
+}

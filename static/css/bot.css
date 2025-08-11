@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#threejs-container   {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    color: var(--text-color);
+}
+
+
+
+.main-header {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 2rem;
+    color: var(--main-color);
+    background-color: var(--second-bg-color);
+}
+
+/* Project overview styles */
+
+.project-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--second-bg-color);
+}
+
+.main-img img {
+    width: 32vw;
+    height: 32vw; /* Ensure the image is square */
+    object-fit: cover;
+    border-radius: 0; /* Remove the border-radius to make it square */
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.main-img img:hover {
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+
+.overview-content p {
+    font-size: 1.8rem;
+}
+
+.overview-content h2 {
+    font-size: 3rem;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+.btn-grid .btn {
+    width: 100%; /* Ensure buttons take full width of the grid cell */
+    padding: 1rem;
+    text-align: center;
+}
+
+/* General-info section */
+.general-info {
+    padding: 4rem;
+    text-align: left;
+}
+
+.general-info h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-size: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    color: var(--text-color);
+}
+
+.info-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.info-content h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.info-content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.info-content ul li {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.info-content ul li::before {
+    content: "•";
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+}
+
+.info-content .btn {
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.info-content .btn:hover {
+    background: var(--main-color-hover);
+    transform: scale(1.05);
+}
+
+
+/* Examples section */
+.exemples {
+    background-color: var(--second-bg-color);
+    padding: 5rem;
+}
+
+.exemple-header{
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 2rem;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+.exemples h2 {
+    padding-bottom: 4rem;
+}
+
+.exemple-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 7rem;
+}
+
+.outer-carrossel {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.exemple-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.exemple-content p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+.exemple-btn-cluster{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 8rem;
+}
+
+
+
+.exemple-content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    margin: 1rem 0;
+}
+
+.exemple-content button i {
+    margin-right: 0.5rem;
+    font-size: 2.8rem;
+    padding-left: 10px;
+}
+
+.exemple-content button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+.exemple-header{
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 2rem;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+/* technical section */
+.technical-header {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 2rem;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+.technical-info button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    margin: 1rem 0;
+    
+}
+
+.technical-info button i {
+    margin-right: 0.5rem;
+    font-size: 2.8rem;
+}
+
+.technical-info button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+
+
+
+@media (max-width: 768px) {
+    .project-overview{
+        flex-direction: column;
+    }
+    .exemple-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .outer-carrossel {
+        width: 250px !important;
+        margin-right: 0;
+        margin-bottom: 2rem; /* Add margin at the bottom for spacing on mobile */
+    }
+
+    .exemple-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .exemple-content button {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .main-img img {
+        width: 64vw;
+        height: 64vw;
+    }
+    #threejs-container canvas {
+        width: 80vw !important;  /* Adjust canvas size */
+        height: auto !important;
+        aspect-ratio: unset !important;
+        padding: 3rem;
+      }
+}
+
+
